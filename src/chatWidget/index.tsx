@@ -19,6 +19,7 @@ export default function ChatWidget({
   chat_window_style,
   height,
   width,
+  chat_inputs,
   error_message_style,
   send_button_style,
   online,
@@ -45,6 +46,7 @@ export default function ChatWidget({
   user_message_style?: React.CSSProperties;
   chat_window_style?: React.CSSProperties;
   online?: boolean;
+  chat_inputs:any;
   online_message?: string;
   offline_message?: string;
   height?: number;
@@ -2177,6 +2179,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
         position={chat_position}
         sessionId={sessionId}
         additional_headers={additional_headers}
+        chat_inputs={chat_inputs}
       />
     </div>
   );

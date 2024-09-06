@@ -42,6 +42,7 @@ export default function ChatWindow({
   tweaks,
   sessionId,
   additional_headers,
+  chat_inputs,
 }: {
   api_key?: string;
   output_type: string;
@@ -54,6 +55,7 @@ export default function ChatWindow({
   error_message_style?: React.CSSProperties;
   send_button_style?: React.CSSProperties;
   online?: boolean;
+  chat_inputs?:any;
   open: boolean;
   online_message?: string;
   placeholder_sending?: string;
@@ -104,6 +106,7 @@ export default function ChatWindow({
       sendMessage(
         hostUrl,
         flowId,
+        chat_inputs,
         value,
         input_type,
         output_type,
